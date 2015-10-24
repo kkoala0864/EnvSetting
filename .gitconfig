@@ -1,0 +1,24 @@
+[user]
+	name = neilhuang
+	email = neilhuang@synology.com
+[core]
+	editor = vim
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+	log = auto
+[alias]
+	st = status
+	ci = commit
+	co = checkout
+	br = branch
+	df = diff
+	la = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ll = log --graph --decorate --pretty=oneline --abbrev-commit
+	lf = log --stat --decorate --format=fuller abbrev-commit
+	cp = cherry-pick
+	fp = format-patch
+[push]
+	default = simple
