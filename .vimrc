@@ -202,9 +202,12 @@ call vundle#rc()
 
 let g:snip_set_textmate_cp=1
 
+" Gblame
 Bundle 'tpope/vim-fugitive'
 
-
+" YouCompleteMe
+let g:ycm_confirm_extra_conf=0
+Plugin 'Valloric/YouCompleteMe'
 
 augroup filetype
   au! BufRead,BufNewFile *.jcs		set filetype=c
