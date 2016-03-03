@@ -206,6 +206,7 @@ let g:snip_set_textmate_cp=1
 Bundle 'tpope/vim-fugitive'
 
 " YouCompleteMe
+let g:ycm_global_ycm_extra_conf='/root/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0
 Plugin 'Valloric/YouCompleteMe'
 
