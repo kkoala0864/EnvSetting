@@ -5,7 +5,7 @@ defscrollback 100000
 #
 hardstatus on
 caption always "%{=u .r} %-w%<%{=ub .Y}%n %t%{=u .r}%+w "
-hardstatus alwayslastline "%{ kk}%{g}%e%<%=%{Y} %D%c:%s %a%{R} %M %d/%m/%Y %=[%{G}@%H %{M}Load: %l %{w}%{R}]"
+hardstatus alwayslastline "%{ kk}%{g}%e%<%=%{Y} %D%c:%s %a%{R} %M %d/%m/%Y %=[%{G}@%H]"
 #
 # # Set default encoding using utf8
  defutf8 on
@@ -47,3 +47,5 @@ hardstatus alwayslastline "%{ kk}%{g}%e%<%=%{Y} %D%c:%s %a%{R} %M %d/%m/%Y %=[%{
  bindkey "^[f" focus
  bindkey "^[q" only
 
+# open new windows with current directory
+ bind c stuff "screen -X chdir \$PWD; screen^M"
