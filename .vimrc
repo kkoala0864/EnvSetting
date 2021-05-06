@@ -218,3 +218,13 @@ augroup filetype
   au! BufRead,BufNewFile *Makefile*	set filetype=make
 augroup END
 
+" vim-go
+call plug#begin()
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+call plug#end()
+let g:go_def_mapping_enabled = 0
+
+" rename tmux window when vim edit file
+autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window " . expand("%"))
+" show bash when vim leave
+autocmd VimLeave * call system("tmux rename-window bash")
