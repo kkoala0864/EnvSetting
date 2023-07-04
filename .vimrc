@@ -205,11 +205,6 @@ let g:snip_set_textmate_cp=1
 " Gblame
 Bundle 'tpope/vim-fugitive'
 
-" YouCompleteMe
-let g:ycm_global_ycm_extra_conf='/root/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
-let g:ycm_confirm_extra_conf=0
-Plugin 'Valloric/YouCompleteMe'
-
 augroup filetype
   au! BufRead,BufNewFile *.jcs		set filetype=c
   au! BufRead,BufNewFile *.ll		set filetype=llvm
@@ -218,11 +213,6 @@ augroup filetype
   au! BufRead,BufNewFile *Makefile*	set filetype=make
 augroup END
 
-" vim-go
-call plug#begin()
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-call plug#end()
-let g:go_def_mapping_enabled = 0
 
 " rename tmux window when vim edit file
 autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window " . expand("%"))
