@@ -15,9 +15,7 @@ set isk+=_,$,@,%,#,-	" none of these should be word dividers, so make them not b
 "-------------------------------------
 set background=dark
 syntax on
-if exists(":colorscheme")
-    colorscheme desert
-endif
+colorscheme torte
 
 set ttyfast 
 " set mouse=a		" make sure mouse is used in all cases.
@@ -34,7 +32,7 @@ set report=0		" tell us when anything is changed via :...
 " setting for the GTK2 GUI
 if has("gui_running")
 	set columns=105 lines=33
-	colorscheme desert
+	colorscheme torte
 "	set guioptions-=tT
 "	set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
 endif
@@ -55,7 +53,6 @@ set langmenu=none
 syntax on
 highlight Comment ctermfg=darkcyan
 highlight Search term=reverse ctermbg=4 ctermfg=7
-
 
 "-------------------------------------
 " Visual Cues
@@ -141,15 +138,6 @@ let g:miniBufExplModSelTarget = 1
 let b:match_ignorecase = 1
 
 "-------------------------------------
-" Perl
-"-------------------------------------
-let perl_extended_vars=1    " highlight advanced perl vars inside strings
-let perl_want_scope_in_variables=1
-let perl_include_pod=1
-let perl_fold=1
-let perl_fold_blocks=1
-
-"-------------------------------------
 " C
 "-------------------------------------
 let c_comment_strings = 1   " hilights strings inside comments
@@ -171,22 +159,21 @@ let g:html_number_lines = 1
 
 
 "-------------------------------------
-" XXX: sby
+" XXX: Neil
 "-------------------------------------
-colorscheme torte
 
-" set cursorcolumn
-" set cursorline
+set cursorcolumn
+set cursorline
 
-" highlight cursorcolumn cterm=bold ctermfg=white ctermbg=cyan
-" highlight cursorline cterm=bold ctermfg=white ctermbg=blue
+highlight cursorcolumn cterm=bold ctermfg=white ctermbg=cyan
+highlight cursorline cterm=bold ctermfg=white ctermbg=blue
+highlight LineNr ctermfg=White
 
 " set nu
 " set mouse=n
 
 " Vundle
-set nocompatible  " no compatible with vi-mode
-"filetype off
+" filetype off
 
 " Vundle Install
 let vundle_install=expand('~/.vim/bundle/vundle/README.md')
@@ -218,3 +205,4 @@ augroup END
 autocmd BufReadPost,FileReadPost,BufNewFile * call system("tmux rename-window " . expand("%"))
 " show bash when vim leave
 autocmd VimLeave * call system("tmux rename-window bash")
+
