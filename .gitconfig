@@ -3,7 +3,6 @@
 	email = neilhuang@synology.com
 [core]
 	editor = vim
-	autocrlf = true
 [color]
 	ui = auto
 	diff = auto
