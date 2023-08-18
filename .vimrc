@@ -10,16 +10,16 @@ if exists(":filetype")
 endif
 set viminfo+=!		" make sure it can save viminfo
 set isk+=_,$,@,%,#,-	" none of these should be word dividers, so make them not be
+
 "-------------------------------------
 " Vim UI
 "-------------------------------------
 set background=dark
 syntax on
 colorscheme torte
-
 set ttyfast 
 " set mouse=a		" make sure mouse is used in all cases.
-" set nomousehide		" hide the mouse pointer when characters are typed
+" set nomousehide	" hide the mouse pointer when characters are typed
 set lsp=0		" space it out just like unix
 set fillchars=vert:\ ,stl:\ ,stlnc:\
 set wildmenu		" turn on wild menu
@@ -28,31 +28,20 @@ set ruler		" Always show current positions along the bottom
 set lz			" do not redraw while running macros (much faster) (LazyRedraw)
 set ignorecase		" easier to ignore case for searching
 set report=0		" tell us when anything is changed via :...
-
-" setting for the GTK2 GUI
-if has("gui_running")
-	set columns=105 lines=33
-	colorscheme torte
-"	set guioptions-=tT
-"	set guifont=Bitstream\ Vera\ Sans\ Mono\ 10
-endif
-
-
-"-------------------------------------
-" Vim locale
-"-------------------------------------
 " set enc=big5
-" set fileencoding=big5
 set hls                
 set sw=2
-set background=dark
 set fileencoding=big5
 set encoding=utf-8
-
 set langmenu=none
-syntax on
+
+" set cursorcolumn
+set cursorline
 highlight Comment ctermfg=darkcyan
 highlight Search term=reverse ctermbg=4 ctermfg=7
+highlight cursorcolumn cterm=bold ctermfg=white ctermbg=cyan
+highlight cursorline cterm=bold ctermfg=white ctermbg=blue
+highlight LineNr ctermfg=White
 
 "-------------------------------------
 " Visual Cues
@@ -126,6 +115,7 @@ nmap t2 :tabnext 2<CR>
 nmap t3 :tabnext 3<CR>
 nmap t4 :tabnext 4<CR>
 nmap t5 :tabnext 5<CR>
+
 "-------------------------------------
 " Minibuf
 "-------------------------------------
@@ -156,21 +146,10 @@ let g:html_use_css = 1
 let g:html_use_xhtml = 1
 let g:html_number_lines = 1
 
-
-
 "-------------------------------------
 " XXX: Neil
 "-------------------------------------
 
-set cursorcolumn
-set cursorline
-
-highlight cursorcolumn cterm=bold ctermfg=white ctermbg=cyan
-highlight cursorline cterm=bold ctermfg=white ctermbg=blue
-highlight LineNr ctermfg=White
-
-" set nu
-" set mouse=n
 
 " Vundle
 " filetype off
