@@ -1,0 +1,15 @@
+BasedOnStyle: LLVM
+IndentWidth: 8
+UseTab: ForIndentation
+AccessModifierOffset: -8
+BreakBeforeBraces: Custom
+ColumnLimit: 0
+AlignEscapedNewlines: DontAlign
+BraceWrapping:
+  AfterStruct: true
+  AfterClass: false
+  AfterFunction: false
+AllowShortFunctionsOnASingleLine: None
+AlignOperands: true
+BreakBeforeBinaryOperators: true
+SortIncludes: false
