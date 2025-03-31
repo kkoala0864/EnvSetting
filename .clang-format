@@ -6,10 +6,12 @@ BreakBeforeBraces: Custom
 ColumnLimit: 0
 AlignEscapedNewlines: DontAlign
 BraceWrapping:
-  AfterStruct: true
-  AfterClass: false
-  AfterFunction: false
-AllowShortFunctionsOnASingleLine: None
+    AfterStruct: true
+    AfterClass: false
+    AfterFunction: false
+AllowShortFunctionsOnASingleLine: true
+AllowShortLoopsOnASingleLine: true
+AllowShortIfStatementsOnASingleLine : true
 AlignOperands: true
 BreakBeforeBinaryOperators: true
 SortIncludes: false
