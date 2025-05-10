@@ -36,7 +36,7 @@ set encoding=utf-8
 set langmenu=none
 
 " set cursorcolumn
-set cursorline
+" set cursorline
 highlight Comment ctermfg=darkcyan
 highlight Search term=reverse ctermbg=4 ctermfg=7
 highlight cursorcolumn cterm=bold ctermfg=white ctermbg=cyan
